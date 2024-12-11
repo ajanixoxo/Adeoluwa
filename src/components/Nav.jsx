@@ -1,4 +1,4 @@
-import { Home, User, Share2, Mail, Github, Linkedin, Twitter, MessageCircle } from 'lucide-react'
+import { Home, User, Share2, Mail, Github, Linkedin, Twitter, MessageCircle, AlignJustify } from 'lucide-react'
 import { useState } from 'react'
 
 export function Nav() {
@@ -7,12 +7,12 @@ export function Nav() {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
 
   return (
-    <nav className="fixed top-0 z-50 flex justify-center items-center w-full border-b bg-background/80 backdrop-blur-sm">
-      <div className="container flex mx-aut0 h-16 items-center justify-around">
+    <nav className="fixed top-0 z-50 flex  justify-center items-center w-full border-b bg-background/80 backdrop-blur-sm">
+      <div className="container flex mx-auto h-16 items-center justify-between px-2 md:px-0 md:justify-around">
         <div>
-            <h1 className="hidden lg:flex text-white main text-2xl"> <span className="font-bold text-blue-700 ">&lt;</span>Adeoluwa <span className="font-bold text-blue-700 ">/&gt; </span>  </h1>
+          <h1 className="flex text-white main text-2xl"> <span className="font-bold text-blue-700 ">&lt;</span>Adeoluwa <span className="font-bold text-blue-700 ">/&gt; </span>  </h1>
         </div>
-        <div className="flex items-center gap-6">
+        <div className="hidden md:flex items-center gap-6">
           <button className="p-2">
             <Home className="h-5 w-5 text-white" />
             <span className="sr-only text-white">Home</span>
@@ -31,16 +31,16 @@ export function Nav() {
           </button>
         </div>
 
-        <div className="hidden sm:flex gap-4">
+        {/* <div className="flex gap-4">
           <button className="p-2 text-white buttonp">Resume</button>
           <button className="p-2" onClick={toggleMenu}>
-            {/* Add a toggle icon here if desired */}
+          
             <span className="sr-only text-white">Theme Toggle</span>
           </button>
-        </div>
+        </div> */}
 
         {/* Social icons */}
-        <div className="flex items-center gap-4">
+        <div className="hidden md:flex items-center gap-4">
           <a href="https://github.com" className="p-2">
             <Github className="h-5 w-5 text-white" />
             <span className="sr-only text-white">GitHub</span>
@@ -65,13 +65,17 @@ export function Nav() {
           onClick={toggleMenu}
         >
           {/* Hamburger icon for mobile menu */}
-          <span className="sr-only text-white">Toggle menu</span>
+          <AlignJustify className="text-white" />
         </button>
       </div>
 
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="sm:hidden fixed top-16 left-0 w-full bg-background/80 backdrop-blur-sm z-40 p-4">
+        <div className="sm:hidden bg-white  fixed top-16 left-0 w-full bg-background/80 backdrop-blur-sm z-40 p-4"
+        data-aos="fade-right"
+        data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="1000">
           <ul className="space-y-4">
             <li>
               <button className="w-full text-left">Home</button>

@@ -33,7 +33,7 @@ function Hero() {
 
                         </h1>
 
-                        <p className="text-3xl lg:text-7xl font-bold text-muted-foreground "
+                        <p className="text-3xl lg:text-6xl font-bold text-muted-foreground "
                           data-aos="fade-up"
                           data-aos-offset="200"
                           data-aos-delay="350"
@@ -65,8 +65,8 @@ function Hero() {
 
                 <div className="relative mt-3 lg:mt-0 flex items-center lg:items-start lg:justify-start justify-center w-full lg:w-[40%] "
                  data-aos="fade-up"
-                 data-aos-offset="200"
-                 data-aos-delay="50"
+                 data-aos-offset="00"
+                 data-aos-delay="0"
                  data-aos-duration="1000">
                     <CodeEditor />
                 </div>
