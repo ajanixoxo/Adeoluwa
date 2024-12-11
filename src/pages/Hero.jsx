@@ -39,7 +39,7 @@ function Hero() {
                           data-aos-delay="350"
                           data-aos-duration="1000"
                          >
-                            A Front-end, Back-end & <br/> App Developer
+                            A Front-end, Back-end and  App Developer
                         </p>
                     </div>
                     <p className="px-2 max-w-[600px] buttonp text-muted-foreground text-base lg:text-lg "
