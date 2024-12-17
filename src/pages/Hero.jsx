@@ -1,7 +1,5 @@
 import CodeEditor from "../components/CodeEditor"
-import AnimatedCodeBlock from "../components/AnimateCodeBlock";
-import GlowCircle from '../components/GlowCircle'
-import Gradient from '../components/Gradient'
+import { Link } from "react-router";
 import Grouped from "../components/Grouped";
 import AOS from 'aos';
 import 'animate.css';
@@ -10,7 +8,7 @@ import 'aos/dist/aos.css';
 AOS.init();
 function Hero() {
     return (
-        <div className="relative min-h-screen text-white w-screen">
+        <div className="relative min-h-screen text-white w-screen" id="h">
             <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:60px_60px]"
                 data-aos="fade-in"
                 data-aos-offset="200"
@@ -63,8 +61,8 @@ function Hero() {
                         data-aos-offset="200"
                         data-aos-delay="750"
                         data-aos-duration="1000">
-                        <button className="flex buttonp items-center gap-2 bg-white rounded-lg px-5 py-2 text-blue-700">Reach Me</button>
-                        <button className="flex buttonp items-center gap-2 rounded-lg border px-5 py-2 ml-8" >View Projects</button>
+                        <button className="flex buttonp items-center gap-2 bg-white rounded-lg px-5 py-2 text-blue-700"> Reach Me</button>
+                        <button className="flex buttonp items-center gap-2 rounded-lg border px-5 py-2 ml-8" ><a href="/#project" >View Projects</a></button>
                     </div>
 
                 </div>

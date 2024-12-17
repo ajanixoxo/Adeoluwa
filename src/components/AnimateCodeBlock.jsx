@@ -15,7 +15,7 @@ function AnimatedCodeBlock({ content, postion, delay }) {
 
   return (
     <motion.div
-      className={`absolute text-xl   font-mono text-white tags p-3 ${postion}`}
+      className={`absolute text-xl   font-mono text-white  p-3 ${postion}`}
       variants={containerVariants}
       initial="hidden"
       animate="visible"
@@ -34,7 +34,7 @@ function AnimatedCodeBlock({ content, postion, delay }) {
           key={index}
           variants={itemVariants}
           transition={{ delay: index * 0.1 }}
-          className=''
+          className='tags'
         >
           {char}
         </motion.span>

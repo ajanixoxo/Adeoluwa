@@ -114,7 +114,7 @@ const projects = [
   ]
 function Projects() {
     return (
-        <section className="relative  flex flex-col mt-5 justify-around mx-auto px-4 py-24 text-white ">
+        <section id="projects" className="relative  flex flex-col mt-5 justify-around mx-auto px-4 py-24 text-white " >
             <Grouped titleO='<project>' titleC='</project>' />
             <div className=" relative z-20 mb-12 text-center ">
                 <h2 className="text-3xl main lg:text-4xl font-bold">Works</h2>
@@ -125,6 +125,7 @@ function Projects() {
                     <ProjectCard key={project.title} {...project} />
                 ))}
             </div>
+            
         </section>
     )
 }
