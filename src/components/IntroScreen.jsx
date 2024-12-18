@@ -34,7 +34,7 @@ export function IntroScreen({ onIntroComplete }) {
           <h1 className={`text-4xl lg:text-9xl main md:text-6xl font-bold text-white mb-4 transition-all duration-300 ${showName ? 'translate-y-0' : 'translate-y-full'}`}>
             {currentName}
           </h1>
-          <p className={`text-xl md:text-2xl text-purple-400 transition-transform duration-1000 ${showOccupation ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'}`}>
+          <p className={`text-xl buttonp md:text-4xl text-purple-400 transition-transform duration-1000 ${showOccupation ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'}`}>
             Software Engineer<br />Web and Mobile App Developer
           </p>
         </div>
