@@ -88,10 +88,10 @@ const techStack = [
               </div>
               <div className="mt-8 flex gap-4">
                 <a
-                  href="#projects"
+                  href="https://flowcv.com/resume/o614k8s695"
                   className="inline-flex items-center rounded-lg bg-purple-500 px-4 py-2 text-sm font-medium text-white hover:bg-purple-600 transition-colors"
                 >
-                  View Projects
+                 Resume
                 </a>
                 <a
                   href="#contact"

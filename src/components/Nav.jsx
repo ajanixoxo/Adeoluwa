@@ -1,9 +1,13 @@
-import { Home, User, Share2, Mail, Github, Linkedin, Twitter, MessageCircle, AlignJustify } from 'lucide-react'
+import { Home, User, Share2, Mail, Github, Linkedin, Twitter, AlignJustify } from 'lucide-react'
 import { useState } from 'react'
-import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy } from 'react-scroll';
+import { Link, animateScroll as scroll } from 'react-scroll';
 
-export function Nav() {
+export function Nav({heroRef, aboutRef, projectsRef, contactRef, experienceRef}) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const scrollToSection = (ref) => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
 
@@ -11,25 +15,30 @@ export function Nav() {
     <nav className="fixed top-0 z-50 flex  justify-center items-center w-full border-b bg-background/80 backdrop-blur-sm">
       <div className="container flex mx-auto h-16 items-center justify-between px-2 md:px-0 md:justify-around">
         <div>
-          <Link href='/' className="flex cursor-pointer text-white main text-2xl"> <span className="font-bold text-blue-700 ">&lt;</span>Adeoluwa <span className="font-bold text-blue-700 ">/&gt; </span>  </Link>
+          <button
+           onClick={() => scrollToSection(heroRef)}
+            className="flex cursor-pointer text-white main text-2xl"> <span className="font-bold text-blue-700 ">&lt;</span>Adeoluwa <span className="font-bold text-blue-700 ">/&gt; </span>  </button>
         </div>
         <div className="hidden md:flex items-center gap-6">
-          <button className="p-2">
-            <Link href='/'>  <Home className="h-5 w-5 text-white" />
-              <span className="sr-only text-white">Home</span></Link>
+          <button className="p-2" onClick={() => scrollToSection(heroRef)}>
+           <Home className="h-5 w-5 text-white" />
+              <span className="sr-only text-white">Home</span>
           </button>
-          <button className="p-2">
-            <Link href='/#about' >   <User className="h-5 w-5 text-white" />
-              <span className="sr-only text-white">About</span></Link>
+          <button className="p-2"
+          onClick={() => scrollToSection(aboutRef)}>
+              <User className="h-5 w-5 text-white" />
+              <span className="sr-only text-white">About</span>
           </button>
-          <button className="p-2">
-            <Link href='/#projects'> <Share2 className="h-5 w-5 text-white" />
-              <span className="sr-only text-white">Project</span></Link>
+          <button className="p-2"
+          onClick={() => scrollToSection(projectsRef)}>
+           <Share2 className="h-5 w-5 text-white" />
+              <span className="sr-only text-white">Project</span>
 
           </button>
-          <button className="p-2">
-            <Link href='/#contact'>  <Mail className="h-5 w-5 text-white" />
-              <span className="sr-only text-white">Contact</span></Link>
+          <button className="p-2"
+          onClick={() => scrollToSection(contactRef)}>
+             <Mail className="h-5 w-5 text-white" />
+              <span className="sr-only text-white">Contact</span>
 
           </button>
         </div>
@@ -44,19 +53,22 @@ export function Nav() {
 
         {/* Social icons */}
         <div className="hidden md:flex items-center gap-4">
-          <Link href="https://github.com" className="p-2">
+          <a href="https://github.com" className="p-2">
             <Github className="h-5 w-5 text-white" />
             <span className="sr-only text-white">GitHub</span>
-          </Link>
-          <Link href="https://linkedin.com" className="p-2">
+          </a>
+          <a href="https://linkedin.com" className="p-2">
             <Linkedin className="h-5 w-5 text-white" />
             <span className="sr-only text-white">LinkedIn</span>
-          </Link>
-          <Link href="https://twitter.com" className="p-2">
+          </a>
+          <a href="https://twitter.com" className="p-2">
             <Twitter className="h-5 w-5 text-white" />
             <span className="sr-only text-white">Twitter</span>
-          </Link>
-          <Link href="/contact" className="p-2">
+          </a>
+          <Link 
+           to="contact"
+           smooth={true}
+           duration={500} className="p-2">
 
             <svg width="15px" height="15px" viewBox="0 0 24 24" fill="transparent
   " xmlns="http://www.w3.org/2000/svg" className='w-6 h-6'>
@@ -87,26 +99,28 @@ export function Nav() {
           data-aos-duration="1000">
           <ul className="space-y-4">
             <li>
-              <Link href='/' >
-                <button className="w-full text-left">Home</button>
-              </Link>
+             
+                <button className="w-full text-left" onClick={() => scrollToSection(heroRef)}>Home</button>
+           
             </li>
             <li>
-              <Link href="#about">
-                <button className="w-full text-left">About</button>
-              </Link>
+            
+                <button onClick={() => scrollToSection(aboutRef)} className="w-full text-left">About</button>
+             
             </li>
             <li>
-              <Link href='#project' >
-                <button className="w-full text-left">Project</button>
-              </Link>
+             
+                <button onClick={() => scrollToSection(projectsRef)} className="w-full text-left">Project</button>
+          
             </li>
             <li>
-              <Link href='#contact'><button className="w-full text-left">Contact</button></Link>
+            
+                <button 
+                onClick={() => scrollToSection(contactRef)} className="w-full text-left">Contact</button>
 
             </li>
             <li>
-              <Link href='#resume' >  <button className="w-full text-left">Resume</button></Link>
+              <a href='https://flowcv.com/resume/o614k8s695' >  <button className="w-full text-left">View Resume</button></a>
 
             </li>
           </ul>

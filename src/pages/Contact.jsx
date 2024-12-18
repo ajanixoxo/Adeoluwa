@@ -46,10 +46,10 @@ const socialLinks = [
 
 function Contact() {
     return (
-        <section className="py-24" id="contact">
+        <section className="relative py-24 " id="contact">
             <Grouped titleO="<contact>" titleC="</contact>" />
             <div className="container mx-auto px-4">
-                <h2 className="text-4xl font-bold text-white mb-8 text-center">Get in Touch</h2>
+                <h2 className="text-4xl font-bold text-white mb-8  mt-5 text-center">Get in Touch</h2>
                 <div className="flex justify-center space-x-6">
                     {socialLinks.map((link, index) => (
                         <a

@@ -31,7 +31,7 @@ export function IntroScreen({ onIntroComplete }) {
     return (
       <div className={`fixed inset-0 flex items-center justify-center bg-gray-900 z-50 transition-opacity duration-1000 ${fadeOut ? 'opacity-0' : 'opacity-100'}`}>
         <div className="text-center">
-          <h1 className={`text-9xl main md:text-6xl font-bold text-white mb-4 transition-all duration-300 ${showName ? 'translate-y-0' : 'translate-y-full'}`}>
+          <h1 className={`text-4xl lg:text-9xl main md:text-6xl font-bold text-white mb-4 transition-all duration-300 ${showName ? 'translate-y-0' : 'translate-y-full'}`}>
             {currentName}
           </h1>
           <p className={`text-xl md:text-2xl text-purple-400 transition-transform duration-1000 ${showOccupation ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'}`}>
