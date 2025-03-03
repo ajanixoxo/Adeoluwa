@@ -43,7 +43,7 @@ const projects = [
       title: "Client's Portfolio",
       description: "A modern portfolio website.",
       image: "/project/wp2.png",
-      link: "https://bukolaoladiti.com.ng/",
+      link: "https://ajanixoxo.github.io/bukolaolditi/ ",
       categories: ["Portfolio", "Web Design"],
       technologies: ["HTML", "CSS", "JavaScript"],
     },
