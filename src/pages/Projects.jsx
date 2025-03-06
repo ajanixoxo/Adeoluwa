@@ -1,5 +1,5 @@
-import WP1 from '/project/wp1.png'
-import WP2 from '/project/wp2.png'
+import WP1 from '/project/np1.png'
+import WP2 from '/project/np2.png'
 import WP3 from '/project/wp3.png'
 import WP4 from '/project/wp4.png'
 import WP5 from '/project/wp5.png'
@@ -16,20 +16,29 @@ import  ProjectCard from '../components/ProjectCard'
 
 const projects = [
     {
-      title: "Rental Web Application Project",
-      description: "A House Rental Website based on Matching Client with agent based on their area....",
-      image: "/project/WP9.png",
-      link: "https://nina-sglowstore.onrender.com/",
+      title: "Tee_shotz Website Portfolio",
+      description: "A portfolio website that showcases a photographers works, services and more...",
+      image: "/project/np1.png",
+      link: "https://tee-shotz.vercel.app/",
+      categories: ["SPA", "Web App"],
+      technologies: ["React", "Tailwindcss", "AOS"],
+    },
+    {
+      title: "PiplePay",
+      description: "A Virtual Card Landing page.",
+      image: "/project/np2.png",
+      link: "https://flurstack.vercel.app/home",
       categories: ["E-commerce", "Web App"],
       technologies: ["React", "Node.js", "MongoDB"],
     },
+    
     {
-      title: "Web Application Project",
-      description: "A Full Stack E-commerce skincare website.",
-      image: "/project/wp1.png",
-      link: "https://nina-sglowstore.onrender.com/",
-      categories: ["E-commerce", "Web App"],
-      technologies: ["React", "Node.js", "MongoDB"],
+      title: "Client's Portfolio",
+      description: "A modern portfolio website.",
+      image: "/project/wp2.png",
+      link: "https://ajanixoxo.github.io/bukolaolditi/ ",
+      categories: ["Portfolio", "Web Design"],
+      technologies: ["HTML", "CSS", "JavaScript"],
     },
     {
       title: "Mobile Application Project",
@@ -40,14 +49,6 @@ const projects = [
       technologies: ["React Native", "Blockchain"],
     },
     {
-      title: "Client's Portfolio",
-      description: "A modern portfolio website.",
-      image: "/project/wp2.png",
-      link: "https://ajanixoxo.github.io/bukolaolditi/ ",
-      categories: ["Portfolio", "Web Design"],
-      technologies: ["HTML", "CSS", "JavaScript"],
-    },
-    {
       title: "Piggy Saving App Design",
       description: "Mobile app for savings.",
       image: "/project/mp3.jpg",
@@ -55,14 +56,7 @@ const projects = [
       categories: ["Mobile", "Finance"],
       technologies: ["React Native", "Redux"],
     },
-    {
-      title: "Mini Furniture Website",
-      description: "E-commerce furniture store.",
-      image: "/project/wp3.png",
-      link: "https://furniture-q47n.onrender.com/",
-      categories: ["E-commerce", "Web Design"],
-      technologies: ["React", "Node.js", "Express"],
-    },
+   
     {
       title: "Website Design",
       description: "An Hero Section of a NFT Website",
