@@ -1,7 +1,26 @@
 import Grouped from '../components/Grouped'
 const experiences = [
+
   {
-    company: "Plexiweb Studio",
+    company: "MyPath2Tech",
+    role: "Full Stack Developer",
+    period: "2025 - Present",
+    responsibilities: [
+      "Led end-to-end development of a tech community platform using Next.js, React, and Prisma with Supabase. Architected the database schema, implemented responsive UI components, and built REST API endpoints for event management. Developed admin authentication, third-party integrations, and event scraping functionality. Created admin interfaces for content management and designed scalable architecture for future features including payment processing and inspection systems. Ensured cross-device compatibility and optimized performance throughout the application lifecycle."
+    ]
+  },
+  {
+    company: "Apture",
+    role: "Full Stack Developer",
+    period: "2025 - Present",
+    responsibilities: [
+      "Worked with other Frontend Developer, Backend, Designer in creating responsive web applications",
+      "Implemented new features resulting in a 30% increase in user engagement",
+      "Optimized website performance, improving load times by 40%"
+    ]
+  },
+  {
+    company: "Plexiweb Studio Agency",
     role: "Frontend Developer",
     period: "2024 - Present",
     responsibilities: [
@@ -11,7 +30,7 @@ const experiences = [
     ]
   },
   {
-    company: "Crezlo",
+    company: "Crezlo Agency",
     role: "Back-end Engineer",
     period: "2024 - Present",
     responsibilities: [
@@ -72,7 +91,7 @@ export function Experience() {
             ))}
           </div>
         </div>
-    
+
       </section></div>
   )
 }
