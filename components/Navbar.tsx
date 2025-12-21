@@ -1,10 +1,21 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { HiMenu, HiX } from 'react-icons/hi'
 // import {GlassCard} from  "@developer-hub/liquid-glass"
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY
+      setIsScrolled(scrollPosition > 50)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   const navLinks = [
     { name: 'Home', href: '#home' },
@@ -16,11 +27,17 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent pt-4">
       {/* <GlassCard> */}
-      <div className="max-w-3xl mx-auto px-6 lg:px-12 liquid-glass rounded-3xl">
+      <div 
+        className={`max-w-3xl mx-auto px-6 lg:px-12 border rounded-3xl transition-all duration-300 ${
+          isScrolled 
+            ? 'bg-white/80 backdrop-blur-md border-dark/20 shadow-sm' 
+            : 'border-white/30'
+        }`}
+      >
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="text-white text-4xl font-bold font-brand">
-            ADE
+          <div className="text-dark text-4xl font-bold font-brand">
+           ADÉ 
           </div>
 
           {/* Desktop Navigation */}
@@ -29,7 +46,7 @@ export default function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-white/80 font-body text-sm font-medium hover:text-white transition-colors"
+                className="text-dark/70 font-body text-sm font-medium hover:text-dark transition-colors"
               >
                 {link.name}
               </a>
@@ -38,7 +55,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white"
+            className="md:hidden text-dark"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <HiX size={24} /> : <HiMenu size={24} />}
@@ -49,13 +66,13 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-dark border-t border-white/10">
+        <div className="md:hidden bg-white/95 backdrop-blur-sm border-t border-dark/10">
           <div className="px-6 py-4 space-y-4">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="block text-white font-body text-base font-medium hover:text-white/80 transition-colors"
+                className="block text-dark font-body text-base font-medium hover:text-dark/70 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.name}

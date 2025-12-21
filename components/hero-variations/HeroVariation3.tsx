@@ -1,13 +1,17 @@
 'use client'
 
+import { motion } from 'motion/react'
+import { HiBriefcase } from 'react-icons/hi'
 import Navbar from '../Navbar'
+import { TextAnimate } from '@/components/ui/text-animate'
+import RippleButton from '@/components/ui/RippleButton'
 
 export default function HeroVariation3() {
   return (
-    <div className="min-h-screen bg-dark relative overflow-hidden">
+    <div className="min-h-screen bg-white relative overflow-hidden">
       {/* Subtle Grid Background */}
       <div 
-        className="absolute inset-0 opacity-[0.03]"
+        className="absolute inset-0 opacity-[0.15]"
         style={{
           backgroundImage: 'linear-gradient(#C0B6B6 1px, transparent 1px), linear-gradient(90deg, #C0B6B6 1px, transparent 1px)',
           backgroundSize: '60px 60px'
@@ -21,38 +25,65 @@ export default function HeroVariation3() {
       <section className="relative z-10 pt-32 pb-32 px-6 lg:px-12 min-h-screen flex items-center justify-center">
         <div className="max-w-4xl mx-auto w-full text-center">
           {/* Greeting */}
-          <h2 className="text-[#e6dede] font-body text-2xl mb-6">
+          <TextAnimate
+            as="h2"
+            className="text-[#4e4b4b] font-body text-2xl mb-6"
+            animation="blurInUp"
+            by="word"
+            delay={0.2}
+          >
             Hello👋! I&apos;m Adeoluwa
-          </h2>
+          </TextAnimate>
 
           {/* Large Typography Headline */}
-          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-8xl font-bold text-white mb-8 leading-[1.05]">
-            <span className="block  font-normal">A Full Stack Developer</span>
-           
-          </h1>
+          <TextAnimate
+            as="h1"
+            className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-8xl font-bold text-dark mb-8 leading-[1.05]"
+            animation="blurInUp"
+            by="word"
+            delay={0.4}
+          >
+            A Full Stack Developer
+          </TextAnimate>
 
           {/* Subtitle */}
-          <p className="font-body text-lg md:text-xl text-white/70 mb-12 max-w-2xl mx-auto leading-relaxed">
+          <TextAnimate
+            as="p"
+            className="font-body text-lg md:text-xl text-dark/70 mb-12 max-w-2xl mx-auto leading-relaxed"
+            animation="fadeIn"
+            by="word"
+            delay={0.6}
+          >
             Crafting thoughtful digital solutions that deliver real value
             through clean code and intentional design.
-          </p>
+          </TextAnimate>
 
-<div className="flex items-center justify-center gap-4"> 
-   <a
-            href="#projects"
-            className="inline-flex items-center gap-2 px-5 py-4 bg-white text-dark font-body text-base font-medium rounded-sm hover:bg-primary transition-colors"
+          <motion.div
+            className="flex items-center justify-center gap-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.6,
+              delay: 0.8,
+              ease: [0.22, 1, 0.36, 1]
+            }}
           >
-            View My Work
-            <span className="text-xl">⚒️</span>
-          </a>
-          <a
-            href="#projects"
-            className="inline-flex animate-pulse items-center gap-2 px-8 py-4 bg-transparent text-white border border-white font-body text-base font-medium rounded-sm hover:bg-primary transition-colors"
-          >
-          Hire Me <span className="bg-red-400 w-2 h-2 rounded-full"></span>
-        
-          </a>
-          </div>
+            <RippleButton
+              href="#projects"
+              variant="primary"
+              className="inline-flex px-5 py-4"
+            >
+              View My Work
+              <HiBriefcase className="text-xl" />
+            </RippleButton>
+            <RippleButton
+              href="#projects"
+              variant="secondary"
+              className="inline-flex px-8 py-4"
+            >
+              Hire Me <span className="bg-red-400 w-2 h-2 rounded-full animate-pulse"></span>
+            </RippleButton>
+          </motion.div>
           {/* CTA */}
         
         </div>
