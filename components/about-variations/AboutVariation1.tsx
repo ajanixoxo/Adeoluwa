@@ -33,7 +33,7 @@ export default function AboutVariation1() {
   ]
 
   return (
-    <section className="min-h-screen bg-white py-32 px-6 lg:px-12">
+    <section id="about" className="min-h-screen bg-white py-32 px-6 lg:px-12">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <h2 className="font-heading text-5xl md:text-6xl font-bold text-dark mb-20 text-center">

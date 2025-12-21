@@ -9,7 +9,7 @@ export default function ContactSection() {
     const isInView = useInView(sectionRef, { once: true, amount: 0.2 })
 
     return (
-        <section ref={sectionRef} className=" bg-dark py-10  relative overflow-hidden ">
+        <section id="contact" ref={sectionRef} className=" bg-dark py-10  relative overflow-hidden ">
             {/* Background Pattern/Doodles */}
             <div className="absolute inset-0 opacity-10">
                 <div className="absolute top-20 left-10 w-32 h-32 border-2 border-white/20 rounded-full"></div>

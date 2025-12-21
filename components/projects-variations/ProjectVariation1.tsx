@@ -27,6 +27,7 @@ export default function ProjectVariation1() {
       title: 'MyPath2Tech',
       description: 'A community platform for tech enthusiasts to connect, learn, and grow together through events and resources.',
       technologies: ['Next.js', 'React', 'Tailwind CSS', 'Framer Motion', 'Express.js'],
+      imageUrl: '/work/mp2t.png',
       liveUrl: 'https://www.mypath2tech.ca/',
       githubUrl: '#',
       featured: true,
@@ -36,6 +37,7 @@ export default function ProjectVariation1() {
       title: 'Apture',
       description: 'Your Friendly Budget and expense planner',
       technologies: ['Next.js', 'React', 'Tailwind CSS', 'Framer Motion', 'Express.js'],
+      imageUrl: '/work/apture2.png',
       liveUrl: 'https://apture.app/',
       githubUrl: '#',
       featured: true,
@@ -45,7 +47,8 @@ export default function ProjectVariation1() {
       title: 'Funkash Technology',
       description: 'A Company that helps startup and talented individuals get their ideas to life.',
       technologies: ['React', 'Node.js', 'Next.js', 'MongoDB'],
-      liveUrl: 'https://flurstack.vercel.app/home',
+      imageUrl: '/work/funkash-main.png',
+      liveUrl: 'https://funkash.com',
       githubUrl: '#',
     },
     {
@@ -53,6 +56,7 @@ export default function ProjectVariation1() {
       title: 'Residde',
       description: 'Discover properties for rent and sale with secure inspection services.',
       technologies: ['Next.js', 'React', 'Tailwind CSS', 'Framer Motion', 'Express.js'],
+      imageUrl: '/work/resside.png',
       liveUrl: 'https://residde-web.vercel.app/',
       githubUrl: '#',
     },
@@ -61,22 +65,16 @@ export default function ProjectVariation1() {
       title: 'Tee_shotz Website Portfolio',
       description: 'A portfolio website that showcases a photographers works, services and more...',
       technologies: ['React', 'Tailwind CSS', 'Next.js', 'AOS'],
+      imageUrl: '/work/tee-shot.png',
       liveUrl: 'https://tee-shotz.vercel.app/',
       githubUrl: '#',
     },
-  
-    {
-      id: 6,
-      title: 'A Dashboard Website',
-      description: 'An Admin Dashboard.',
-      technologies: ['React', 'Chart.js', 'Tailwind CSS'],
-      liveUrl: 'https://crownz-dasboard.vercel.app/',
-      githubUrl: '#',
-    },
+   
+   
   ]
 
   return (
-    <section className="min-h-screen bg-white py-32 px-6 lg:px-12">
+    <section id="projects" className="min-h-screen bg-white py-32 px-6 lg:px-12">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <motion.div
@@ -104,10 +102,22 @@ export default function ProjectVariation1() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group relative bg-white border-2 border-secondary rounded-sm overflow-hidden hover:border-accent transition-all duration-300"
             >
-              {/* Project Image Placeholder */}
-              <div className="h-48 bg-linear-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                <div className="text-6xl opacity-20">💻</div>
-              </div>
+              {/* Project Image */}
+              {project.imageUrl ? (
+                <div className="relative h-48 w-full overflow-hidden">
+                  <Image
+                    src={project.imageUrl}
+                    alt={project.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                </div>
+              ) : (
+                <div className="h-48 bg-linear-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
+                  <div className="text-6xl opacity-20">💻</div>
+                </div>
+              )}
 
               {/* Project Content */}
               <div className="p-6">
@@ -152,7 +162,7 @@ export default function ProjectVariation1() {
                   {project.githubUrl && (
                     <a
                       href={project.githubUrl}
-                      className="flex items-center gap-2 text-dark/70 hover:text-accent transition-colors font-body text-sm font-medium"
+                      className="flex items-center gap-2 text-dark/70 hover:text-gray-700 transition-colors font-body text-sm font-medium"
                     >
                       <HiCode className="text-lg" />
                       Code

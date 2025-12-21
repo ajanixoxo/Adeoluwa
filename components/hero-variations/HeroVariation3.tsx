@@ -6,24 +6,28 @@ import Navbar from '../Navbar'
 import { TextAnimate } from '@/components/ui/text-animate'
 import RippleButton from '@/components/ui/RippleButton'
 import Magnet from '../Magnet'
+import { InteractiveGridPattern } from '@/components/ui/interactive-grid-pattern'
+import { cn } from '@/lib/utils'
 
 export default function HeroVariation3() {
   return (
     <div className="min-h-screen bg-white relative overflow-hidden">
-      {/* Subtle Grid Background */}
-      <div 
-        className="absolute inset-0 opacity-[0.15]"
-        style={{
-          backgroundImage: 'linear-gradient(#C0B6B6 1px, transparent 1px), linear-gradient(90deg, #C0B6B6 1px, transparent 1px)',
-          backgroundSize: '60px 60px'
-        }}
+      {/* Interactive Grid Pattern */}
+      <InteractiveGridPattern
+        className={cn(
+          "mask-[radial-gradient(600px_circle_at_center,white,transparent)]"
+        )}
+        width={60}
+        height={60}
+        squares={[80, 80]}
+        squaresClassName="hover:fill-blue-400"
       />
 
       {/* Navigation */}
       <Navbar />
 
       {/* Hero Section - Centered */}
-      <section className="relative z-10 pt-32 pb-32 px-6 lg:px-12 min-h-screen flex items-center justify-center">
+      <section id="home" className="relative z-10 pt-32 pb-32 px-6 lg:px-12 min-h-screen flex items-center justify-center">
         <div className="max-w-4xl mx-auto w-full text-center">
           {/* Greeting */}
           <TextAnimate
@@ -60,7 +64,7 @@ export default function HeroVariation3() {
           </TextAnimate>
 
           <motion.div
-            className="flex items-center justify-center gap-4"
+            className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
@@ -72,20 +76,20 @@ export default function HeroVariation3() {
             <RippleButton
               href="#projects"
               variant="primary"
-              className="inline-flex px-5 py-4"
+              className="inline-flex w-full sm:w-auto justify-center px-4 py-3 sm:px-5 sm:py-4 text-base sm:text-lg"
             >
               View My Work
-              <HiBriefcase className="text-xl" />
+              <HiBriefcase className="text-lg sm:text-xl" />
             </RippleButton>
             <Magnet disabled={false} padding={120} magnetStrength={2}>
-               <RippleButton
-              href="#projects"
-              variant="secondary"
-              className="inline-flex px-8 py-4"
-            >
-              Hire Me <span className="bg-red-400 w-2 h-2 rounded-full animate-pulse"></span>
-            </RippleButton></Magnet>
-            
+              <RippleButton
+                href="#projects"
+                variant="secondary"
+                className="inline-flex w-full sm:w-auto justify-center px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg"
+              >
+                Hire Me <span className="bg-red-400 w-2 h-2 rounded-full animate-pulse ml-2"></span>
+              </RippleButton>
+            </Magnet>
           </motion.div>
           {/* CTA */}
         

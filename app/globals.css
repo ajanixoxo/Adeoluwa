@@ -36,7 +36,9 @@
   --font-agbalumo: var(--font-agbalumo), sans-serif;
   --font-questrial: var(--font-questrial), sans-serif;
 }
-
+html{
+  scroll-behavior: smooth;
+}
 body {
   font-family: var(--font-body);
   color: var(--color-dark);

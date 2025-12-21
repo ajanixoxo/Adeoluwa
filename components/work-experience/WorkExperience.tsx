@@ -45,7 +45,7 @@ export default function WorkExperience() {
   ]
 
   return (
-    <section ref={sectionRef} className="min-h-screen bg-white py-32 px-6 lg:px-12">
+    <section id="work" ref={sectionRef} className="min-h-screen bg-white py-32 px-6 lg:px-12">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <motion.div
