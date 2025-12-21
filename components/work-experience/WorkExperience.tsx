@@ -3,7 +3,6 @@
 import { motion, useInView } from 'motion/react'
 import { useRef } from 'react'
 import Image from 'next/image'
-import { FaArrowRight } from 'react-icons/fa'
 
 interface Company {
   id: number

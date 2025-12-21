@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useRef, useEffect, useState, useMemo } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -377,6 +378,7 @@ const Shuffle: React.FC<ShuffleProps> = ({
   );
   const Tag = (tag || 'p') as keyof JSX.IntrinsicElements;
 
+  // eslint-disable-next-line react-hooks/refs
   return React.createElement(Tag, { ref: ref as any, className: classes, style: commonStyle }, text);
 };
 

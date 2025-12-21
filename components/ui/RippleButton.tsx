@@ -57,6 +57,7 @@ export default function RippleButton({
   return (
     <>
       <Component
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         ref={buttonRef as any}
         {...componentProps}
         onMouseEnter={handleMouseEnter}
