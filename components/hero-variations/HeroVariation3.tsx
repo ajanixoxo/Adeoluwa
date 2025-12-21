@@ -5,6 +5,7 @@ import { HiBriefcase } from 'react-icons/hi'
 import Navbar from '../Navbar'
 import { TextAnimate } from '@/components/ui/text-animate'
 import RippleButton from '@/components/ui/RippleButton'
+import Magnet from '../Magnet'
 
 export default function HeroVariation3() {
   return (
@@ -76,13 +77,15 @@ export default function HeroVariation3() {
               View My Work
               <HiBriefcase className="text-xl" />
             </RippleButton>
-            <RippleButton
+            <Magnet disabled={false} padding={120} magnetStrength={2}>
+               <RippleButton
               href="#projects"
               variant="secondary"
               className="inline-flex px-8 py-4"
             >
               Hire Me <span className="bg-red-400 w-2 h-2 rounded-full animate-pulse"></span>
-            </RippleButton>
+            </RippleButton></Magnet>
+            
           </motion.div>
           {/* CTA */}
         
