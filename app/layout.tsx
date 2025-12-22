@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins, Gugi, Agbalumo, Questrial } from "next/font/google";
+import { Analytics } from '@vercel/analytics/react';
 import "./globals.css";
 
 const poppins = Poppins({
@@ -157,6 +158,7 @@ export default function RootLayout({
       </head>
       <body className={`${poppins.variable} ${gugi.variable} ${agbalumo.variable} ${questrial.variable} antialiased`}>
         {children}
+        <Analytics />
       </body>
     </html>
   );
