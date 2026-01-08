@@ -69,7 +69,24 @@ export default function ProjectVariation1() {
       liveUrl: 'https://tee-shotz.vercel.app/',
       githubUrl: '#',
     },
-   
+    {
+      id: 6,
+      title: 'Tourlity',
+      description: 'A touring platform that allows users to book tours to specific locations. Users can attend tours physically or via live stream, with multiple functionalities for hosts, guests, and users, each with their own rules in a particular tour.',
+      technologies: ['Next.js', 'React', 'Tailwind CSS', 'Node.js', "Supabase", "WebRTC", "postgreSQL"],
+      imageUrl: '/work/tourlity.png',
+      liveUrl: 'https://tourlity.vercel.app/',
+      githubUrl: '#',
+    },
+    {
+      id: 7,
+      title: '3D Keyboard',
+      description: 'A project showcase website that displays products using 3D technology, built with GSAP and Next.js.',
+      technologies: ['Next.js', 'GSAP', 'Three.js'],
+      imageUrl: '/work/3dkeyboard.png',
+      liveUrl: 'https://keyboard-livid-six.vercel.app/',
+      githubUrl: '#',
+    },
    
   ]
 
