@@ -20,10 +20,22 @@ export default function Navbar() {
 
   const handleLinkClick = (href: string) => {
     setMobileMenuOpen(false)
-    const element = document.querySelector(href)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    }
+    
+    // Add a delay to allow menu animation to complete before scrolling
+    setTimeout(() => {
+      const element = document.querySelector(href)
+      if (element) {
+        // Account for fixed navbar height (navbar height + padding)
+        const offset = 120 // Adjust based on your navbar height
+        const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
+        const offsetPosition = elementPosition - offset
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        })
+      }
+    }, 300) // Wait for menu close animation (300ms matches the animation duration)
   }
 
   const navLinks = [
