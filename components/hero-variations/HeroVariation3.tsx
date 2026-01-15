@@ -83,7 +83,7 @@ export default function HeroVariation3() {
             </RippleButton>
             <Magnet disabled={false} padding={120} magnetStrength={2}>
               <RippleButton
-                href="#projects"
+                href="#contact"
                 variant="secondary"
                 className="inline-flex w-full sm:w-auto justify-center px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg"
               >
