@@ -1,4 +1,4 @@
-# Adeoluwa Gberno - Portfolio Website
+# Adeoluwa Gberno Ayomide - Portfolio Website
 
 A modern, responsive portfolio website built with Next.js 16, showcasing my work as a Full Stack Developer and Software Engineer. Features smooth animations, interactive components, and a clean, minimal design aesthetic.
 
