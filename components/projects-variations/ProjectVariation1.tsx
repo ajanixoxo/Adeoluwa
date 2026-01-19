@@ -87,6 +87,24 @@ export default function ProjectVariation1() {
       liveUrl: 'https://keyboard-livid-six.vercel.app/',
       githubUrl: '#',
     },
+    {
+      id: 8,
+      title: 'Rain Fitness',
+      description: 'A modern fitness website UI clone featuring personalized workout programs, nutrition coaching, and premium membership plans with a clean, minimalist design.',
+      technologies: ['Next.js', 'React', 'Tailwind CSS', 'Framer Motion'],
+      imageUrl: '/work/rain-fitness.png',
+      liveUrl: 'https://rain-fitness.vercel.app/',
+      githubUrl: '#',
+    },
+    {
+      id: 9,
+      title: 'KeyClash',
+      description: 'A real-time typing battle game where players challenge friends or opponents to see who types faster and more accurately. Features live match chat and global leaderboards.',
+      technologies: ['Next.js', 'React', 'Tailwind CSS', 'WebSockets', 'Real-time'],
+      imageUrl: '/work/keyclash.png',
+      liveUrl: 'https://key-clash.vercel.app/',
+      githubUrl: '#',
+    },
    
   ]
 
