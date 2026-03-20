@@ -22,16 +22,6 @@ export default function ProjectVariation1() {
   const isInView = useInView(projectsRef, { once: true, amount: 0.2 })
 
   const projects: Project[] = [
-    {
-      id: 1,
-      title: 'MyPath2Tech',
-      description: 'A community platform for tech enthusiasts to connect, learn, and grow together through events and resources.',
-      technologies: ['Next.js', 'React', 'Tailwind CSS', 'Framer Motion', 'Express.js'],
-      imageUrl: '/work/mp2t.png',
-      liveUrl: 'https://www.mypath2tech.ca/',
-      githubUrl: '#',
-      featured: true,
-    },
     // {
     //   id: 2,
     //   title: 'Apture',
@@ -42,15 +32,6 @@ export default function ProjectVariation1() {
     //   githubUrl: '#',
     //   featured: true,
     // },
-    {
-      id: 5,
-      title: 'Funkash Technology',
-      description: 'A Company that helps startup and talented individuals get their ideas to life.',
-      technologies: ['React', 'Node.js', 'Next.js', 'MongoDB'],
-      imageUrl: '/work/funkash-main.png',
-      liveUrl: 'https://funkash.com',
-      githubUrl: '#',
-    },
     {
       id: 3,
       title: 'Residde',
@@ -69,15 +50,7 @@ export default function ProjectVariation1() {
       liveUrl: 'https://tee-shotz.vercel.app/',
       githubUrl: '#',
     },
-    {
-      id: 6,
-      title: 'Tourlity',
-      description: 'A touring platform that allows users to book tours to specific locations. Users can attend tours physically or via live stream, with multiple functionalities for hosts, guests, and users, each with their own rules in a particular tour.',
-      technologies: ['Next.js', 'React', 'Tailwind CSS', 'Node.js', "Supabase", "WebRTC", "postgreSQL"],
-      imageUrl: '/work/tourlity.png',
-      liveUrl: 'https://tourlity.vercel.app/',
-      githubUrl: '#',
-    },
+
     {
       id: 7,
       title: '3D Keyboard',
@@ -105,7 +78,7 @@ export default function ProjectVariation1() {
       liveUrl: 'https://key-clash.vercel.app/',
       githubUrl: '#',
     },
-   
+
   ]
 
   return (
