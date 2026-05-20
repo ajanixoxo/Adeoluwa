@@ -33,24 +33,6 @@ export default function ProjectVariation1() {
     //   featured: true,
     // },
     {
-      id: 3,
-      title: 'Residde',
-      description: 'Discover properties for rent and sale with secure inspection services.',
-      technologies: ['Next.js', 'React', 'Tailwind CSS', 'Framer Motion', 'Express.js'],
-      imageUrl: '/work/resside.png',
-      liveUrl: 'https://residde-web.vercel.app/',
-      githubUrl: '#',
-    },
-    {
-      id: 4,
-      title: 'Tee_shotz Website Portfolio',
-      description: 'A portfolio website that showcases a photographers works, services and more...',
-      technologies: ['React', 'Tailwind CSS', 'Next.js', 'AOS'],
-      imageUrl: '/work/tee-shot.png',
-      liveUrl: 'https://tee-shotz.vercel.app/',
-      githubUrl: '#',
-    },
-    {
       id: 10,
       title: 'Tourlity',
       description: 'A touring platform for booking tours to specific locations, offering both physical attendance and live-stream options with dedicated host, guest, and user roles.',
@@ -68,6 +50,25 @@ export default function ProjectVariation1() {
       liveUrl: 'https://myeduflex.com/',
       githubUrl: '#',
     },
+    {
+      id: 3,
+      title: 'Residde',
+      description: 'Discover properties for rent and sale with secure inspection services.',
+      technologies: ['Next.js', 'React', 'Tailwind CSS', 'Framer Motion', 'Express.js'],
+      imageUrl: '/work/resside.png',
+      liveUrl: 'https://residde-web.vercel.app/',
+      githubUrl: '#',
+    },
+    {
+      id: 4,
+      title: 'Tee_shotz Website Portfolio',
+      description: 'A portfolio website that showcases a photographers works, services and more...',
+      technologies: ['React', 'Tailwind CSS', 'Next.js', 'AOS'],
+      imageUrl: '/work/tee-shot.png',
+      liveUrl: 'https://tee-shotz.vercel.app/',
+      githubUrl: '#',
+    },
+    
 
     {
       id: 7,

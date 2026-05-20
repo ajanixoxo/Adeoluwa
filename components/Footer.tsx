@@ -13,6 +13,11 @@ export default function Footer() {
       href: 'https://x.com/dexcoded01',
     },
     {
+     name:"Whatsapp",
+     icon: FaEnvelope,
+     href: 'https://wa.me/2349130300630',
+    },
+    {
       name: 'Tiktok',
       icon: FaTiktok,
       href: 'https://www.tiktok.com/@certifiedtechbrvh',
