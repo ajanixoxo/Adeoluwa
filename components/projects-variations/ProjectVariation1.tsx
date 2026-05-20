@@ -50,6 +50,24 @@ export default function ProjectVariation1() {
       liveUrl: 'https://tee-shotz.vercel.app/',
       githubUrl: '#',
     },
+    {
+      id: 10,
+      title: 'Tourlity',
+      description: 'A touring platform for booking tours to specific locations, offering both physical attendance and live-stream options with dedicated host, guest, and user roles.',
+      technologies: ['Next.js', 'React', 'Tailwind CSS', 'GSAP'],
+      imageUrl: '/work/tourlity.png',
+      liveUrl: 'https://tourlity.com',
+      githubUrl: '#',
+    },
+    {
+      id: 11,
+      title: 'Eduflex',
+      description: 'An AI-based learning platform for any user, designed to personalize learning and provide intelligent guidance across courses and topics.',
+      technologies: ['Next.js', 'React', 'AI', 'Tailwind CSS'],
+      imageUrl: '/work/placeholder.svg',
+      liveUrl: 'https://myeduflex.com/',
+      githubUrl: '#',
+    },
 
     {
       id: 7,
