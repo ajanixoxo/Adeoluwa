@@ -51,7 +51,7 @@ export default function AboutVariation1() {
             containerClassName=""
             textClassName="text-dark font-body"
           >
-            My name is AdeOluwa Gberno, and I&apos;m a Full-Stack Developer and Software Engineer with a strong focus on building modern, scalable web applications.
+            My name is Adeoluwa Gberno, and I&apos;m a Full-Stack Developer and Software Engineer with a strong focus on building modern, scalable web applications.
           </ScrollReveal>
 
           <ScrollReveal
